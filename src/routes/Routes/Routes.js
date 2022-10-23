@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../../components/Home/Home";
+import Login from "../../components/Login/Login";
 import Root from "../../layout/Root";
 
 export const router = createBrowserRouter([
@@ -18,6 +19,10 @@ export const router = createBrowserRouter([
         element: <Home />,
         loader: () =>
           fetch("https://travel-guru-server-fmyv.vercel.app/destinations"),
+      },
+      {
+        path: "login",
+        element: <Login />,
       },
     ],
   },

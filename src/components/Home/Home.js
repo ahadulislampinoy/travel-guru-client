@@ -14,9 +14,7 @@ const Home = () => {
     >
       <div className="backdrop-blur-sm h-screen">
         <Header />
-        {destinations.map((destination) => (
-          <Destinations key={destination.id} destination={destination} />
-        ))}
+        <Destinations destinations={destinations} />
       </div>
     </div>
   );

@@ -1,10 +1,14 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
+import Header from "../components/Header/Header";
 
 const Root = () => {
+  const location = useLocation();
   return (
     <div>
-      {/* <Header /> */}
+      <div className={location.pathname === "/" ? "hidden" : "block"}>
+        <Header />
+      </div>
       <Outlet />
     </div>
   );
